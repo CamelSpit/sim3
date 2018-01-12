@@ -78,11 +78,8 @@ app.get("/api/auth/setUser", function (req,res){
     if (!req.user){
         res.status(404).send("user not found");
     }
-    else {res.status(200).send(req.user);
-    next()}
-}), function (req,res){
-    res.redirect('http://localhost:3012/dashboard')
-}//I am not sure if this last bit of code after the "next()" is correct. 
+    else {res.status(200).send(req.user).redirect('http://localhost:3012/dashboard')
+}}) 
 
 massive(process.env.CONNECTION).then(database=>{
     app.set('db', database);
