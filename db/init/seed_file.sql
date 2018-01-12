@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS sim3users (id SERIAL PRIMARY KEY, firstname VARCHAR(50), lastname VARCHAR(50), username VARCHAR(50), email VARCHAR(180), auth_id TEXT);
